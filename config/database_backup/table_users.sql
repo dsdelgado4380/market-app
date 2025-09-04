@@ -13,5 +13,10 @@ created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
 update_at TIMESTAMPTZ NOT NULL DEFAULT now(),
 deleted_at TIMESTAMPTZ NULL);
 
-INSERT INTO users(firstname,lastname,mobile_number,email,password) 
-VALUES ('Daniel','Delgado','3000456782','dsdelgado@gmail.com','1234');
+INSERT INTO users(
+    firstname,
+    lastname,
+    mobile_number,
+    email,password) 
+VALUES (
+    'Daniel','Delgado','3000456782','dsdelgado@gmail.com','1234');
