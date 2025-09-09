@@ -17,7 +17,7 @@
  $conn = pg_connect($data_connection);
 
  if(!$conn){
-    echo "ERROR";
+    echo "ERROR".pg_last_error();
  }else{
     echo "Connection successfully :::";
  }
