@@ -20,3 +20,14 @@ INSERT INTO users(
     email,password) 
 VALUES (
     'Daniel','Delgado','3000456782','dsdelgado@gmail.com','1234');
+
+select 
+    u.ide_number,
+    u.firstname || ' ' || u.lastname,
+    u.email,
+    u."password",
+    case when u.status = true then 'Active' else 'Inactive' end
+from 
+    users u 
+where 
+ u.status = true;
