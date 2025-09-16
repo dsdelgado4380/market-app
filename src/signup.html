@@ -8,27 +8,29 @@
 </head>
 <body>
     <center><h1>Register</h1></center>
-    <table border="0" align="center">
-        <tr><td><label>First Name: </label></td></tr>
-        <tr><td><input type="text"placeholder="Enter your fist name"><br></td></tr>
-        <tr><td><label>Last Name: </label></td></tr>
-        <tr><td><input type="text"placeholder="Enter your last name"><br></td></tr>
-        <tr><td><label>Mobile Number: </label></td></tr>
-        <tr><td><input type="text"placeholder="Enter your mobile number"><br></td></tr>
-        <tr><td><label>Identification Number: </label></td></tr>
-        <tr><td><input type="text"placeholder="Enter your id"><br></td></tr>
-        <tr><td><label>E-mail: </label></td></tr>
-        <tr><td><input type="email"placeholder="Enter your e-mail"><br></td></tr>
-        <tr><td><label>Password: </label></td></tr>
-        <tr><td><input type="password"placeholder="Enter your password"><br><br></td></tr>
-        <!--<tr><td><button>Register</button></td></tr>-->
-        <tr><td style="text-align:center;"><button style="background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">Register</button></td></tr>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <tr><td style="text-align:center;"><a href="#" style="color:#3b5998;font-size:24px; margin:0 8px;"><i class="fab fa-facebook-f"></i></a>
-        <a href="mailto:tucorreo@gmail.com" style="color:#db4437;font-size:24px; margin:0 8px;"><i class="fab fa-google"></i></a>
-        <a href="#" style="color:#333;font-size:24px; margin:0 8px;"><i class="fab fa-github"></i></a></td></tr>
-
-    </table>
+    <form name="register-form" action="signup.php" method="post">
+        <table border="0" align="center">
+            <tr><td><label>First Name: </label></td></tr>
+            <tr><td><input type="text" name="fname" placeholder="Enter your fist name" required><br></td></tr>
+            <tr><td><label>Last Name: </label></td></tr>
+            <tr><td><input type="text" name="lname" placeholder="Enter your last name" required><br></td></tr>
+            <tr><td><label>Mobile Number: </label></td></tr>
+            <tr><td><input type="text" name="mnumber" placeholder="Enter your mobile number" required><br></td></tr>
+            <tr><td><label>Identification Number: </label></td></tr>
+            <tr><td><input type="text" name="idnumber" placeholder="Enter your id" required><br></td></tr>
+            <tr><td><label>E-mail: </label></td></tr>
+            <tr><td><input type="email" name="email" placeholder="Enter your e-mail" required><br></td></tr>
+            <tr><td><label>Password: </label></td></tr>
+            <tr><td><input type="password" name="passwd" placeholder="Enter your password" required><br><br></td></tr>
+            <!--<tr><td><button>Register</button></td></tr>-->
+            <tr><td style="text-align:center;"><button style="background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">Register</button></td></tr>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <tr><td style="text-align:center;"><a href="#" style="color:#3b5998;font-size:24px; margin:0 8px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:tucorreo@gmail.com" style="color:#db4437;font-size:24px; margin:0 8px;"><i class="fab fa-google"></i></a>
+            <a href="#" style="color:#333;font-size:24px; margin:0 8px;"><i class="fab fa-github"></i></a></td></tr>
+            
+        </table>
+    </form>
 
     <!--<label>Last Name: </label><br><br>
     <input type="text"><br><br>
@@ -36,7 +38,15 @@
     <label>Password: </label><br><br>
     <input type="password"><br><br>
     <input type="submit" value="Register">
+    <tr><td style="text-align: center;"><button style="background-color: rgb(214, 148, 148); color: rgb(0, 0, 0); 
+            padding: 5px 10px; border: 1px solid rgb(46, 46, 46); cursor: pointer;">Register</button></td></tr>
+    <tr><td style="text-align:center;"><button style="background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">Register</button></td></tr>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <tr><td style="text-align:center;"><a href="#" style="color:#3b5998;font-size:24px; margin:0 8px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:tucorreo@gmail.com" style="color:#db4437;font-size:24px; margin:0 8px;"><i class="fab fa-google"></i></a>
+            <a href="#" style="color:#333;font-size:24px; margin:0 8px;"><i class="fab fa-github"></i></a></td></tr>
     <button>Register</button>-->
+    
 
 </body>
 </html>
