@@ -22,7 +22,7 @@
     LIMIT 1
     ";
     $res_check = pg_query($conn,$check_email);
-    if(pg_num_rows(res_check)> 0){
+    if(pg_num_rows($res_check)> 0){
         echo "<script>alert('User already exists !!')</script>";
         header('refresh:0;url=signup.html');
     } else{
@@ -41,7 +41,7 @@
         '$m_number',
         '$id_number',
         '$e_mail',
-        '$enc_pass'
+        '$p_wd'
         )
     ";
 
