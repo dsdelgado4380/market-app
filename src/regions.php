@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($res) {
         echo "<script>alert('Region registered successfully');</script>";
-        header('refresh:0; url=register_country.php');
+        header('refresh:0; url=cities.php');
         exit;
     } else {
         echo "Something went wrong with region insertion";

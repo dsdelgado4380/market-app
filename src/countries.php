@@ -42,7 +42,7 @@
         // Step 6: validate result
         if ($res) {
             echo "<script>alert('Country registered successfully');</script>";
-            header('refresh:0; url=regions.html');
+            header('refresh:0; url=regions.php');
         } else {
             echo "Something went wrong: " . pg_last_error($conn_supa);
         }
