@@ -6,14 +6,16 @@
     $name = trim($_POST['name']);
     $abbrev = trim($_POST['abbrev']);
     $code = trim($_POST['code']);
+    $country_id = trim($_POST['country_id']);
 
     $query = "
-        INSERT INTO countries (
+        INSERT INTO regions (
             name, 
             abbrev, 
-            code
+            code,
+            country_id
         ) VALUES (
-            '$name', '$abbrev', '$code'
+            '$name', '$abbrev', '$code', '$country_id'
         )
         ";
         //execute query
@@ -21,9 +23,8 @@
         //validate result
         if($res){
             //echo "Users has been created sucessfully!!!";
-             echo "<center><h3 style='color:green;'> Country registered success!!!</h3></center>";
+             echo "<center><h3 style='color:green;'> Region registered success!!!</h3></center>";
         } else {
             echo "Something wrong!";
         }
 ?>
-
