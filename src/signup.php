@@ -68,7 +68,7 @@
         echo "Something wrong!";
     }
     }
-
+    
 ?>
    <!DOCTYPE html>
 <html lang="en">
@@ -112,12 +112,12 @@
                     <?php endwhile; ?>
                 </select>
             </td></tr>
-            <tr><td><center><button style="background-color: rgb(240, 121, 119); margin-top: 1ex; margin-bottom: 1ex;">Register</button></center></td></tr>
-            <tr><td style="text-align: center;">
-                <img src="icons/google.png" alt="Google Icon" width="24" height="24" style="margin-right: 8px;">
-                <img src="icons/facebook.png" alt="Facebook Icon" width="24" height="24" style="margin-right: 8px;">
-                <img src="icons/github.png" alt="GitHub Icon" width="24" height="24">
-            </td></tr>
+            <!--<tr><td><button>Register</button></td></tr>-->
+            <tr><td style="text-align:center;"><button style="background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">Register</button></td></tr>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <tr><td style="text-align:center;"><a href="#" style="color:#3b5998;font-size:24px; margin:0 8px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:tucorreo@gmail.com" style="color:#e71401;font-size:24px; margin:0 8px;"><i class="fab fa-google"></i></a>
+            <a href="#" style="color:#333;font-size:24px; margin:0 8px;"><i class="fab fa-github"></i></a></td></tr>
             <tr><td><center><a href="signin.html" style="color:royalblue; text-decoration: underline;">I already have an account</a></center></td></tr>
         </table>
     </form>

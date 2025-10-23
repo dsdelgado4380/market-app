@@ -29,15 +29,20 @@ $local_data_connection = "
 ";
 
 $conn_supa = pg_connect($supa_data_connection);
-
-if (!$conn_supa) {
-    // Si Supabase falla, intenta conectar localmente como respaldo
-    $conn_local = pg_connect($local_data_connection);
-    if (!$conn_local) {
-        die("ERROR: Could not connect to Supabase or local DB.\n" . pg_last_error());
-    } else {
-        $conn_supa = $conn_local;
-    }
+$conn_local = pg_connect($local_data_connection);  
+/*
+if(!$conn_supa){
+    echo "Error".pg_last_error();
+}else{
+    //echo "Connection Surccessfully  :::  ";
 }
+*/
+
+if(!$conn_local){
+    echo "Error".pg_last_error();
+}else{
+    //echo "Connection Surccessfully  :::  ";
+}
+
 
 ?>

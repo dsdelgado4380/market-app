@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,31 +8,49 @@
 </head>
 <body>
     <center><h1>Register</h1></center>
-    <form name="register-form" action="signup.php" method="post">
+    <form name="register-form" action="signup1.php" method="post">
         <table border="0" align="center">
-            <tr><td><label>First Name: </label></td></tr>
-            <tr><td><input type="text" name="fname" placeholder="Enter your fist name" required><br></td></tr>
-            <tr><td><label>Last Name: </label></td></tr>
-            <tr><td><input type="text" name="lname" placeholder="Enter your last name" required><br></td></tr>
-            <tr><td><label>Mobile Number: </label></td></tr>
-            <tr><td><input type="text" name="mnumber" placeholder="Enter your mobile number" required><br></td></tr>
-            <tr><td><label>Identification Number: </label></td></tr>
-            <tr><td><input type="text" name="idnumber" placeholder="Enter your id" required><br></td></tr>
-            <tr><td><label>E-mail: </label></td></tr>
-            <tr><td><input type="email" name="email" placeholder="Enter your e-mail" required><br></td></tr>
-            <tr><td><label>Password: </label></td></tr>
-            <tr><td><input type="password" name="passwd" placeholder="Enter your password" required><br><br></td></tr>
-            <!--<tr><td><button>Register</button></td></tr>-->
+            <tr><td><label>Firstname:</label></td></tr>
+            <tr><td><input type="text" name="fname" placeholder="Firstname" required></td></tr>
+            <tr><td><label>Lastname:</label></td></tr>
+            <tr><td><input type="text" name="lname" placeholder="Lastname" required></td></tr>
+            <tr><td><label>Adress:</label></td></tr>
+            <tr><td><input type="text" name="adress" placeholder="Adress" required></td></tr>
+            <tr><td><label>Mobile number:</label></td></tr>
+            <tr><td><input type="text" name="mnumber" placeholder="Mobile phone" required></td></tr>
+            <tr><td><label>Identification number:</label></td></tr>
+            <tr><td><input type="text" name="idenumber" placeholder="Identification number" required></td></tr>
+            <tr><td><label>Email:</label></td></tr>
+            <tr><td><input type="email" name="email" placeholder="Email" required></td></tr>
+            <tr><td><label>Password:</label></td></tr>
+            <tr><td><input type="password" name="passwd" placeholder="Password" required><br></td></tr>
+            <tr><td><label>Birth city:</label></td></tr>
+            <tr><td>
+                <select name="id_city_birthday" required>
+                    <?php while ($row = pg_fetch_assoc($cities)): ?>
+                        <option value="<?php echo $row['id']; ?>"><?php echo htmlspecialchars($row['name']); ?></option>
+                    <?php endwhile; ?>
+                </select>    
+            </td></tr>
+            <tr><td><label>City document:</label></td></tr>
+            <tr><td>
+                <select name="id_city_document" required>
+                    <?php while ($row = pg_fetch_assoc($cities2)): ?>
+                        <option value="<?php echo $row['id']; ?>"><?php echo htmlspecialchars($row['name']); ?></option>
+                    <?php endwhile; ?>
+                </select>
+            </td></tr>
+            <!--<tr><td><button>Register</button></td></tr>
             <tr><td style="text-align:center;"><button style="background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">Register</button></td></tr>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <tr><td style="text-align:center;"><a href="#" style="color:#3b5998;font-size:24px; margin:0 8px;"><i class="fab fa-facebook-f"></i></a>
             <a href="mailto:tucorreo@gmail.com" style="color:#e71401;font-size:24px; margin:0 8px;"><i class="fab fa-google"></i></a>
             <a href="#" style="color:#333;font-size:24px; margin:0 8px;"><i class="fab fa-github"></i></a></td></tr>
-            
+            <tr><td><center><a href="signin.html" style="color:royalblue; text-decoration: underline;">I already have an account</a></center></td></tr>
         </table>
     </form>
 
-    <!--<label>Last Name: </label><br><br>
+    <label>Last Name: </label><br><br>
     <input type="text"><br><br>
     <input type="email"><br><br>
     <label>Password: </label><br><br>
@@ -45,8 +63,8 @@
             <tr><td style="text-align:center;"><a href="#" style="color:#3b5998;font-size:24px; margin:0 8px;"><i class="fab fa-facebook-f"></i></a>
             <a href="mailto:tucorreo@gmail.com" style="color:#db4437;font-size:24px; margin:0 8px;"><i class="fab fa-google"></i></a>
             <a href="#" style="color:#333;font-size:24px; margin:0 8px;"><i class="fab fa-github"></i></a></td></tr>
-    <button>Register</button>-->
+    <button>Register</button>
     
 
 </body>
-</html>
+</html>-->

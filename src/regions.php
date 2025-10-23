@@ -15,7 +15,7 @@ $countries = pg_query($conn_supa, $query);
     <link rel="icon" href="icons/map.png" type="image/png">
 </head>
 <body>
-    <center><h1>Add Region</h1></center>
+    <center><h1>Register Region</h1></center>
     <form action="regions1.php" method="post">
         <table align="center">
             <tr><td><label>Name:</label></td></tr>
