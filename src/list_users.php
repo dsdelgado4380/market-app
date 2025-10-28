@@ -1,5 +1,5 @@
 <?php
-//s
+//step 1. Get database connection
     require('../config/database.php');
 ?>
 
@@ -9,9 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketapp - List users</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <table border="1" align="center">
+    <div class="container mt-3">
+    <table align="center" class="table table-dark table-striped"> 
         <tr> 
         </tr>
         <tr>
@@ -24,15 +27,17 @@
         </tr>
         <?php
             $sql_users="
-            select u.firstname  || ' ' || u.lastname as fullname,
+            select
+            u.id as user_id,
+            u.firstname  || ' ' || u.lastname as fullname,
             u.email,
             u.ide_number,
             u.mobile_number,
                 case
                     when u.status = true then 'Active' else 'Inactive'
-                end
+                end as status
             from 
-                users as u
+                users u
             ";   
             $result = pg_query($conn_local, $sql_users);
             if(!$result){
@@ -45,15 +50,15 @@
                     <td>".$row['email'] ."</td>
                     <td>".$row['ide_number'] ."</td>
                     <td>".$row['mobile_number'] ."</td>
-                    <td>active</td>
+                    <td>".$row['status'] ."</td>
                     <td>
                             <a href='#'>
-                              <img src='icons/search.png' width='30'>
+                              <img src='icons/search1.png' width='30'>
                             </a>
                             <a href='#'>
-                                <img src='icons/update.png' width='30'>
+                                <img src='icons/update1.png' width='30'>
                             </a>
-                            <a href='#'>
+                            <a href='delete_user.php?userId=".$row['user_id'] ."'>
                                 <img src='icons/delete.png' width='30'>
                             </a>
                     </td> 
@@ -61,6 +66,7 @@
             }
         ?> 
            
-    </table>    
+    </table>  
+    </div>  
 </body>
 </html>
