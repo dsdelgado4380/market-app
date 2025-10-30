@@ -20,7 +20,7 @@
         <tr>
            <th>Fullname</th>
            <th>E-mail</th>
-           <th>ide. number</th>
+           <th>Ide. number</th>
            <th>Phone number</th>
            <th>Status</th>
            <th>Options</th> 
@@ -55,7 +55,7 @@
                             <a href='#'>
                               <img src='icons/search1.png' width='30'>
                             </a>
-                            <a href='#'>
+                            <a href='edit_user_form.php?userId=".$row['user_id'] ."'>
                                 <img src='icons/update1.png' width='30'>
                             </a>
                             <a href='delete_user.php?userId=".$row['user_id'] ."'>

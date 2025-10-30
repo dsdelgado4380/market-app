@@ -11,7 +11,7 @@
     if(!$result){
         die("Error:". pg_last_error());
     }else{
-        echo "<script>alert('User has been deleted!')</script>"
+        echo "<script>alert('User has been deleted!')</script>";
         header('refresh:0;url=list_users.php');
     } 
 
