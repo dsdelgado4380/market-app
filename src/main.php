@@ -1,5 +1,9 @@
 <?php
-echo "Welcome to main !!!";
+    session_start();
+
+    if(isset($_SESSION['session_user_id'])){
+        header('refresh:0;url=error_403.html');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +15,8 @@ echo "Welcome to main !!!";
     <link rel="icon"type="image/png" href="icons/market_main1.png" />
 </head>
 <body>
-    
+    <center><b><?php echo $_SESSION['session_user_fullname']; ?></center>
+    <a href = "list_users.php">List all users</a> ||
+    <a href = "logout.php">Logout</a>
 </body>
 </html>

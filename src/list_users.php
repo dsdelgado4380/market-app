@@ -1,6 +1,12 @@
 <?php
 //step 1. Get database connection
     require('../config/database.php');
+
+    session_start();
+
+    if(isset($_SESSION['session_user_id'])){
+        header('refresh:0;url=error_403.html');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -56,10 +62,10 @@
                               <img src='icons/search1.png' width='30'>
                             </a>
                             <a href='edit_user_form.php?userId=".$row['user_id'] ."'>
-                                <img src='icons/update1.png' width='30'>
+                                <img src='icons/update2.png' width='30'>
                             </a>
                             <a href='delete_user.php?userId=".$row['user_id'] ."'>
-                                <img src='icons/delete.png' width='30'>
+                                <img src='icons/delete1.png' width='30'>
                             </a>
                     </td> 
               </tr>";
