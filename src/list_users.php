@@ -2,11 +2,11 @@
 //step 1. Get database connection
     require('../config/database.php');
 
-    session_start();
+    /*session_start();
 
     if(!isset($_SESSION['session_user_id'])){
         header('refresh:0;url=error_403.html');
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +29,7 @@
            <th>Ide. number</th>
            <th>Phone number</th>
            <th>Status</th>
+           <th>Photo</th>
            <th>Options</th> 
         </tr>
         <?php
@@ -41,7 +42,8 @@
             u.mobile_number,
                 case
                     when u.status = true then 'Active' else 'Inactive'
-                end as status
+                end as status,
+                u.url_photo
             from 
                 users u
             ";   
@@ -57,6 +59,7 @@
                     <td>".$row['ide_number'] ."</td>
                     <td>".$row['mobile_number'] ."</td>
                     <td>".$row['status'] ."</td>
+                    <td><img src =".$row['url_photo'] ." width=30></td>
                     <td>
                             <a href='#'>
                               <img src='icons/search1.png' width='30'>
